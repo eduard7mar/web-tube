@@ -3,12 +3,23 @@ import {
   ChevronUp,
   Clapperboard,
   Clock,
+  Film,
+  Flame,
+  Gamepad2,
   History,
   Home,
   Library,
+  Lightbulb,
   ListVideo,
+  Music2,
+  Newspaper,
   PlaySquare,
+  Podcast,
+  Radio,
   Repeat,
+  Shirt,
+  ShoppingBag,
+  Trophy,
 } from "lucide-react";
 import { Children, ElementType, ReactNode, useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -67,6 +78,52 @@ export function Sidebar() {
               url={`/playlist?list=${playlist.id}`}
             />
           ))}
+        </LargeSidebarSection>
+        <hr />
+        <LargeSidebarSection title="Explore">
+          <LargeSidebarItem
+            IconOrImgUrl={Flame}
+            title="Trending"
+            url="/trending"
+          />
+          <LargeSidebarItem
+            IconOrImgUrl={ShoppingBag}
+            title="Shopping"
+            url="/shopping"
+          />
+          <LargeSidebarItem IconOrImgUrl={Music2} title="Music" url="/music" />
+          <LargeSidebarItem
+            IconOrImgUrl={Film}
+            title="Movies & TV"
+            url="/movies-tv"
+          />
+          <LargeSidebarItem IconOrImgUrl={Radio} title="Live" url="/live" />
+          <LargeSidebarItem
+            IconOrImgUrl={Gamepad2}
+            title="Gaming"
+            url="/gaming"
+          />
+          <LargeSidebarItem IconOrImgUrl={Newspaper} title="News" url="/news" />
+          <LargeSidebarItem
+            IconOrImgUrl={Trophy}
+            title="Sports"
+            url="/sports"
+          />
+          <LargeSidebarItem
+            IconOrImgUrl={Lightbulb}
+            title="Learning"
+            url="/learning"
+          />
+          <LargeSidebarItem
+            IconOrImgUrl={Shirt}
+            title="Fashion & Beauty"
+            url="/fashion-beauty"
+          />
+          <LargeSidebarItem
+            IconOrImgUrl={Podcast}
+            title="Podcasts"
+            url="/podcasts"
+          />
         </LargeSidebarSection>
       </aside>
     </>
